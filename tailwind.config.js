@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage:{
-        hero : "url('../public/weatherrrr 1.svg')",    
+        hero : "url('../public/weather_pixel.webp')",    
       },
     },
   },

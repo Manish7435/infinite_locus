@@ -16,6 +16,7 @@ function App() {
         setWeatherData(data);
       } else {
         setError(true)
+        setWeatherData('');
       }
   
     } catch (error) {
@@ -40,7 +41,7 @@ function App() {
          </div>
       </div>
 
-          <form onSubmit={handleSubmit} className='pt-60'>
+          <form onSubmit={handleSubmit} className='pt-44'>
             <div className='flex sm:w-[400px] w-full relative bg-white rounded-3xl px-4 justify-between'>
               <input
                 className='outline-none bg-white h-12 px-4 rounded-3xl text-black '
@@ -59,7 +60,7 @@ function App() {
              
               <div className='flex items-center text-3xl text-blue-600 font-semibold'>
                   <img src ={`https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`} alt='weather_icon' className='z-20 h-20 w-20 '/>
-                  <p > {weatherData.main.temp}°C</p>
+                  <p style={{color: weatherData.main.temp> 29 ? 'Orange' : 'blueviolet'}}> {weatherData.main.temp}°C</p>
               </div>
               <div className='sm:h-30 w-full bg bg-gradient-to-tr from-cyan-300 to-white px-20 py-10 rounded-lg opacity-55 flex flex-col text-center'>
                   <p className='sm:text-3xl text-2xl font-semibold '>  {getCurrentTime()}</p>
