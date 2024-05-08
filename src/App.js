@@ -34,8 +34,8 @@ function App() {
   return (
     <div className='bg-hero bg-cover bg-center h-screen w-full flex flex-col items-center'>
       <div className='absolute left-4 top-4 flex items-center'>
-         <img src = "/Weather_app.svg" alt='weather' className='h-16 w-16'/>
-         <div className='text-blue-600 font-bold ml-3 text-3xl'>
+         <img src = "/Weather_app.svg" alt='weather' className='sm:h-16 sm:w-16 h-12 w-12'/>
+         <div className='text-blue-600 font-bold ml-3 sm:text-3xl text-2xl'>
            WEATHER
          </div>
       </div>
@@ -62,7 +62,7 @@ function App() {
                   <p > {weatherData.main.temp}°C</p>
               </div>
               <div className='sm:h-30 w-full bg bg-gradient-to-tr from-cyan-300 to-white px-20 py-10 rounded-lg opacity-55 flex flex-col text-center'>
-                  <p className='text-3xl font-semibold '>  {getCurrentTime()}</p>
+                  <p className='sm:text-3xl text-2xl font-semibold '>  {getCurrentTime()}</p>
                    <p className='text-3xl font-semibold text-orange-500'>{`${weatherData.weather[0].description[0].toUpperCase()}${weatherData.weather[0].description.slice(1)}`}</p>
                   <p className='mt-2'><span className='text-blue-500 font-semibold '>Humidity:</span> {weatherData.main.humidity}%</p>
                   <p><span className='text-blue-500 font-semibold'> Wind Speed:</span> {weatherData.wind.speed} m/s</p>
